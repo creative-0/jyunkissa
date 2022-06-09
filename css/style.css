@@ -55,7 +55,7 @@ header{
 	margin-left: 3%;
 	background-image: url("../images/cherry.png");
 	background-position: 80% 0%;
-	background-size: 60%;
+	background-size: 75px;
 	background-repeat: no-repeat;
 	height: 100%;
 }
@@ -152,7 +152,7 @@ footer small{
 	background-image:url(../images/cherry.png);
 	background-color: rgba(255, 255, 255, 0.362);
 	background-repeat: no-repeat;
-	background-size: 50%;
+	background-size: 600px;
 	background-position: 90% 0%;
 	text-align: left;
 	font-family: source-han-sans-japanese,sans-serif;
