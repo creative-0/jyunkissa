@@ -1,0 +1,1033 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	color: #413636;
+	font-size: 16px;
+	font-family: vdl-gigajr, sans-serif;
+	font-style: normal;
+	font-weight: 500;	
+}
+
+p,h,h1,h2,h3,h4,h5,h6{
+	margin-top: 0;
+	color: #000000;
+}
+img{
+	vertical-align:bottom;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+header{
+	width: 100vw;
+	height:80px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	margin-bottom: 0;
+}
+#wrap{
+	margin:0 auto;
+	clear:both;
+}
+.content{
+	margin:0 auto;
+	width:960px;
+}
+.logo{
+	float: left;
+	margin-top: 0px;
+	margin-left: 3%;
+	background-image: url("../images/cherry.png");
+	background-position: 80% 0%;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+@media screen and (max-width:599px){
+	.logo{
+		margin:0 38%;
+		width: 200px;
+	}
+}
+.logo a{
+	text-decoration: none;
+	line-height: 30px;
+	font-size: 16px;
+	color:#000000;
+}
+@media screen and (max-width:599px){
+	.logo br{
+		display:none;
+	}
+}
+
+.logo:hover{
+	background-color: #FFC3C4;
+	background-color: rgba(255,216,216,0.5);
+}
+.logotoka{
+	background-color: rgba(255,255,255,0.1);
+}
+
+.global-nav{
+	float: right;
+	margin-top: 2%;
+	margin-right: 3%;
+}
+@media screen and (max-width:599px){
+	.global-nav{
+		clear:both;
+		width: 100vw;
+		background-color:#C5C6FF;
+		margin:0;
+	}
+}
+.global-nav li{
+	float: left;
+	margin: 0 5px;
+	list-style: none;
+	font-family: vdl-gigajr, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+@media screen and (max-width:599px){
+	.global-nav li{
+		width: 25%;
+		margin:0;
+		font-size:14px;	
+	}
+}
+.global-nav li a:hover{
+	background-color: #FFC3C4;
+	background-color: rgba(255,216,216,0.7);
+	text-decoration: none;
+}
+
+footer{
+	text-align: center;
+	color: #413636;
+	padding: 20px 0;
+	background-color: #353131;
+	margin-top: 100px;
+}
+
+footer small{
+	font-size: 12px;
+	color: #ffffff;
+}
+.top-image{
+	width: 100%;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+
+/*「このブログは」始まり*/
+.whatisblog{
+	width: 100vw;
+	margin: 50px auto;
+	height: 500px;
+	background-image:url(../images/cherry.png);
+	background-color: rgba(255, 255, 255, 0.362);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: 90% 0%;
+	text-align: left;
+	font-family: source-han-sans-japanese,sans-serif;
+	font-style: normal;
+}
+@media screen and (max-width:599px){
+	.whatisblog{
+		width:100vw;
+		word-wrap: keep-all;
+		border: 1px solid;
+		float:left;
+		text-align:left;
+		height:auto;
+	}
+}
+
+.whatisblog h1{
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 50px;
+	margin-top: 40px;
+}
+
+.whatisblog p{
+	font-size: 16px;
+    font-weight: 400;
+	line-height: 100%;
+	margin: 15px;
+	color: #000000;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+.text{
+	width: 960px;
+	padding-bottom: 10px;
+}
+
+/*ここからリスト*/
+.list{
+	clear:both;
+	width: 960px;
+	height:750px;
+	background-color: #F9ABC3;
+}
+@media screen and (max-width:599px){
+	.list{
+		width:100vw;
+		height:1500px;
+	}
+}
+
+.list h1{
+	text-align: center;
+	margin-top: 30px;
+	padding: 0;
+	font-size: 25px;
+}
+
+
+/*ここからブログ一覧のエリア*/
+.area{
+	background-color: #AE648F;
+	width: 430px;
+	height: 650px;
+	float: left;
+	margin: 45px 25px;
+	border-radius: 40px;
+	background-image:url("../images/purin_foto.png"),url(../images/pafe.png);
+	background-repeat: no-repeat;
+	background-position: 250px 30px,-80px 450px;
+	background-size: 70%;
+	border: 1px solid;
+}
+@media screen and (max-width:599px){
+	.area{
+		clear:both;
+		width: 80%;
+		margin-left:10%;
+	}
+}
+
+.area p{
+	font-size: 16px;
+}
+
+/*テーブルの中身*/
+.area table{
+	width: 100%;
+	margin: 60px auto 0 ;
+	border-spacing: 4px 20px;
+}
+.content a{
+	text-decoration: none;
+	color: #000000;
+}
+.area th{
+	height: 50px;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	border: 1px solid #180202;
+	border-radius: 30px 0 0 30px;
+	transition: backgroundcolor .25s;
+	padding-left: 10px;
+}
+.area th:hover{
+	background-color: #FFE8F5;
+}
+.area td{
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #180202;
+	background-color: #ffffff;
+	border-radius: 0 30px 30px 0;
+}
+
+/*ブログ記事一覧のエリア*/
+
+.blog{
+	background-color: #ffffff;
+	width: 420px;
+	height: 650px;
+	text-align: center;
+	float: left;
+	margin: 45px 25px;
+	border: 1px solid;
+	border-radius: 40px;
+}
+
+@media screen and (max-width:599px){
+	.blog{clear:both;
+		width: 80%;
+		margin-left:10%;}
+}
+.blog p{
+	font-size: 16px;
+	background-color: #ffffff;
+	padding: 0px 5px;
+	float: left;
+	margin-top: 8px;
+	margin-left: 5px;
+	margin-bottom: 30px;
+}
+
+.blog .daimei{
+	font-size: 18px;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 0px 5px;
+	margin-left: 60px;
+	margin-top: 5px;
+}
+
+.blog img{
+	display: block;
+	clear: both;
+	margin: auto;
+	border: 1px solid;
+	width: 70%;
+}
+.blog img:hover{
+	transform:translateY(-10px);
+	transition-duration:.3s;
+}
+.more{
+	background-color: #ffffff;
+	text-align: center;	
+	display: inline-block;
+	border: 1px solid;
+	clear: both;
+	transition: background-color .2s;
+}
+
+.blog .more{
+	margin-left: 54%;
+	padding: 8px;
+}
+.tokusyu .more{
+	font-size: 16px;
+	margin-left: 54%;
+	background-color: #ffffff;
+	padding: 8px;
+	transition: background-color .2s;
+}
+.more:hover{
+	background-color: #FFE8F5;
+}
+
+/*特集記事と週間ランキングのセクション始まり*/
+.tokusyuandranking{
+	width: 960px;
+	height:850px;
+	margin-top: 80px;
+	clear: both;
+}
+
+@media screen and (max-width:599px){
+	.tokusyuandranking{
+		height: 1700px;
+		width:100vw;}	
+}
+
+/*特殊記事始まり*/
+.tokusyu {
+	width: 470px;
+	height: 800px;
+	text-align: center;
+	float: left;
+}
+@media screen and (max-width:599px){
+	.tokusyu {
+		width: 80%;
+		margin-left:10%;
+		clear:both;
+		content:"";
+		display: block;
+		background:#C5C6FF;
+		margin-bottom:25px;
+	}
+}
+
+.tokusyu h1{
+	font-size: 60px;
+	text-align: center;
+	padding: 0px;
+	margin-bottom: 20px;
+	font-family: source-han-sans-japanese,sans-serif;
+    color: #F0809E;
+    text-shadow:
+    1px 1px #000,
+    -1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    1px 0px #000,
+    0px 1px #000,
+    -1px 0px #000,
+    0px -1px #000;
+}
+@media screen and (max-width:599px){
+	.tokusyu h1{
+		color: #C796FF;}
+}
+.tokusyu p{
+	font-size: 18px;
+	padding: 7px 0;
+	margin: 30px 50px 0px;
+	background-color: #F4ACAD;
+	color:#000000;
+}
+@media screen and (max-width:599px){
+	.tokusyu p{
+		background-color: #FFCCF4;}
+}
+.tokusyu img{
+	padding:10px;
+	margin: 10px auto 0;
+	height: 200px;
+	display:block;
+}
+.tokusyu img:hover{
+	transform: translateY(-5px);
+	transition-duration: .5s;
+}
+
+/*週間ランキング始まり*/
+.ranking{
+	width: 450px;
+	height: 720px;
+	float: left;
+	margin-left: 38px;
+	background-color: #f999b7;
+	border-radius: 30px 0 0 30px;
+}
+@media screen and (max-width:599px){
+	.ranking{
+		clear:both;
+		width: 80%;
+		margin-left:10%;
+		}
+}
+
+/*週間ランキング見出し*/
+.ranking h1{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+/*1.2.3*/
+.ranking h2{
+	font-family: source-han-sans-japanese,sans-serif;
+    color: white;
+	margin-left: 30px;
+	font-size: 80px;
+	border: none;
+    text-shadow:
+    1px 1px #000,
+    -1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    1px 0px #000,
+    0px 1px #000,
+    -1px 0px #000,
+    0px -1px #000;
+}
+
+.ranking img{
+	border: 1px solid;
+	width: 70%;
+	
+}
+/*王城ー上野(2022/5/1)*/
+.ranking p{
+	background-color: #ffffff;
+	font-size: 16px;
+	clear: both;
+	text-align: center;
+	margin:10px 79px 0;
+}
+
+.flex{
+	margin-top: 30px;
+	display:flex;
+}
+
+/*★★ーーーーー都心６区ここから★★ーーー----------------------ー*/
+.areamain{
+	border: 1px solid;
+	width: 720px;
+	float: left;
+}
+.areamain img{
+	border: 1px solid #000000;
+	margin-top: 20px;
+	width: 75%;
+	height:250px;
+}
+
+/*都心６区エリアの文字設定*/
+.areamain h1,h2{
+	font-family: source-han-sans-japanese,sans-serif;
+    color: #ffffff;
+	font-size: 80px;
+	padding: 0;
+	margin: 0;
+    text-shadow:
+    1px 1px #000,
+    -1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    1px 0px #000,
+    0px 1px #000,
+    -1px 0px #000,
+    0px -1px #000;
+}
+.areamain h2{
+	font-size: 50px;
+}
+.areamain h3{
+	font-size:  16px;
+	margin: 5px 0px 0px 40px;
+	text-align: left;
+}
+/*---------------ボタン始まり-------------------*/
+.btn{
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 16px;
+	display: inline-block;
+	padding: 0 15px;
+	border-radius: 20px;
+	border: 1px solid;
+	text-align: center;
+	margin-right: 120px;
+}
+.btn:hover{
+	transition: background-color .25s;
+	background-color: #B4B4B4;
+
+}
+#area .btn:hover{
+	background-color: #ABD9D0;
+}
+#east_area .btn:hover{
+	background-color: #DC8D5D;
+}
+#south_area .btn:hover{
+	background-color: #C8D96E;
+}
+#north_area .btn:hover{
+	background-color: #9A6868;
+}
+#west_area .btn:hover{
+	background-color: #B299D9;
+}
+.area .btn{
+	margin-right: 110px;
+}
+/*---------------ボタン終わり-------------------*/
+.box p{
+	font-size: 14px;
+	margin: 5px 0 0 0px;
+	text-align: left;
+	padding-left: 40px;
+}
+#area_sidebar h1{
+	font-size: 16px;
+	color: #ffffff;
+}
+#area_sidebar h2{
+	font-size: 16px;
+	color: #000000;
+	text-shadow: none;
+}
+
+/*都心６区の基本設定*/
+.ku{
+	width: 650px;
+	height: 1200px;
+	border: 1px solid;
+	text-align: center;
+	margin: 50px auto;
+	clear: both;
+	margin-bottom: 100px;
+	background-color: #d2bbf6;
+}
+/*全てのエリアボックス設定*/
+.box{
+	width: 265px;
+	height:400px;
+	float:left;
+	margin-left: 40px;
+	margin-top: 30px;
+	border: 1px solid;
+	background-color: #F8F8F4;	
+}
+.box:hover{
+	transform: translateY(-5px);
+	transition-duration: .5s;
+}
+/*4段のエリアの高さ調整*/
+.shinjyuku{
+	height: 2000px;
+}
+/*３段のエリアの高さ調整*/
+/**.shinjyuku{
+	height: 1600px;
+}*/
+/*２段のエリアの高さ調整*/
+.tiyoda{
+	height: 1200px;
+}
+
+/*1段のエリアの高さ調整*/
+.suginami, .nerima, .toshima,
+.itabashi, .arakawa , .kita, 
+.setagaya, .meguro, .shinagawa, .ota,
+.adachi, .koto, .sumida, .katsushika, .edogawa, .taito, 
+.bunkyo, .minato, .tyuo, .shibuya{
+	height: 800px;
+}
+/*エリアごとの背景カラー*/
+#area .ku{
+	background: #D6FFF7;
+}
+#north_area .ku{
+	background: #B28A8A;
+}
+#west_area .ku{
+	background: #d2bbf6;
+}
+#east_area .ku{
+	background: #FFC6A3;
+}
+#south_area .ku{
+	background: #F5FFBF;
+}
+/**★★大エリアに入る★★**/
+/*
+.areabetsu{
+	width: 960px;
+	height:1300px;
+	background-color: #FCE87D;
+	background-image:url(../images/purin.png),url(../images/pafe.png);
+	background-repeat: no-repeat;
+	background-position: 700px 0px,-100px 800px;
+	background-size: 400px,500px;
+	border: 1px solid;
+}
+
+.areabetsu h1{
+	text-align: center;
+	margin: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: source-han-sans-japanese,sans-serif;
+    color: #ffffff;
+	font-size: 50px;
+    text-shadow:
+    1px 1px #000,
+    -1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    1px 0px #000,
+    0px 1px #000,
+    -1px 0px #000,
+    0px -1px #000;
+}
+
+.areabetsu table{
+	width:700px;
+	margin: 0px auto 30px;
+	background-color: #ffffff;
+	border: 7px solid #6A4444;
+	border-radius: 30px;
+}
+.areabetsu th{
+	font-size: 20px;
+	width: 150px;
+}
+.areabetsu td:nth-of-type(1){
+	font-size: 17px;
+	width: 150px;
+	text-align: center;
+}
+.areabetsu td:nth-of-type(2){
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+*/
+/*ーーー★★kissaten.html始まり★★ーーー*/
+#kissaten .content{
+	width: 960px;
+}
+.leftcontent{
+	width: 615px;
+	height: 1050px;
+	background-color: #E3E4FF;
+	text-align: center;
+	float: left;
+}
+.leftcontent h2,h3,p{
+	font-size: 20px;
+	text-shadow: none;
+	color: #7F7F7F;
+	margin: 0;
+	font-family: source-han-sans-japanese,sans-serif;
+}
+.leftcontent h1{
+	font-family: source-han-sans-japanese,sans-serif;
+	font-size: 35px;
+    color: #7F7F7F;
+	padding-top: 40px;
+	display: inline-block;
+}
+.leftcontent h2{
+	margin-bottom: 10px;
+}
+.leftcontent p{
+	font-size: 16px;
+	margin: 30px 20px;
+	background-color: #ffffff;
+	border-radius: 30px;
+	padding: 10px;
+    font-weight: 400;
+}
+
+.leftcontent img{
+	max-width: 50%;
+	height:350px;
+}
+/*喫茶店の説明初め*/
+.version{
+	width: 550px;
+	height: 300px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	margin: 30px auto;
+}
+.version img{
+	height: 200px;
+	float: left;
+	display: block;
+	margin: 50px; 
+	border-radius: 20px;
+	border: 3px solid;
+}
+.version h3{
+	margin:0;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: left;
+	padding-top: 45px;
+	border: none;
+}
+.version p{
+	text-align: left;
+	border: none;
+	border-radius: 0;
+	padding: 5px;
+	margin: 0;
+}
+
+/*ーーー★★プロフィールページの始まり★★ーーー*/
+.profile{
+	height: 500px;
+	width: 960px;
+	text-align: center;
+	font-family: source-han-sans-japanese,sans-serif;
+}
+.profile h1{
+	sont-size: 35px;
+	margin-bottom: 0;
+}
+.profile img{
+	height: 300px;
+}
+.profile p{
+	font-size: 16px;
+	text-align: center;
+	line-height: 28px;
+}
+
+.profiletext{
+	text-align: center;
+	clear: both;
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+.profiletext p{
+	font-size: 16px;
+	margin-top:10px;
+	padding: 0;
+	font-family: source-han-sans-japanese,sans-serif;
+    font-weight: 400;
+}
+/*SNS始まり*/
+.instagram, .twitter, .youtube{
+	margin-top: 20px;
+	padding: 0;
+	border: 1px solid;
+	width: 960px;
+	height: 325px;
+}
+.instagram:hover, .twitter:hover, .youtube:hover{
+	transform:translateY(-5px);
+	transition-duration: .2s;
+	box-shadow: 0 10px 10px 0; 
+}
+.instagram img, .twitter img ,.youtube img {
+	margin-left: 30px;
+}
+.twitter_ex{
+	width: 260px;
+	margin-left: 100px;
+}
+.youtube_ex{
+	width: 350px;
+	margin-bottom: 60px;
+}
+
+.sns h1{
+	text-align: center;
+	border: 1px solid;
+	background-color: rgba(21,138,26,0.6);
+	color: aliceblue;
+	margin: 50px 0;
+}
+
+/*ーーー★★特集ページの始まり★★ーーー*/
+#tokusyu .content{
+	background-color: #FF8082;
+}
+
+.article h1{
+	text-align: center;
+	margin-top: 100px;
+	color: #ffffff;
+}
+.article img{
+	width: 70%;
+	margin: 0;
+}
+.article img:hover{
+	transform: translateY(-10px);
+	transition-suration: .5s;
+}
+
+#tokusyu .btn{
+	display: block;
+	position: absolute;
+	top: 260px;
+	left: 300px;
+}
+
+.tokusyu_box{
+	width: 470px;
+	height: 300px;
+	float: left;
+	position: relative;
+}
+#imagetwo,#imagefour{
+	border: 10px solid #ffffff;
+	margin-top: 20px;
+	margin-left: 55px;
+	padding: 0;
+}
+#imageone,#imagethree{
+	border: 10px solid #ffffff;
+	margin-top: 20px;
+	margin-left: 85px;
+	padding: 0;
+}
+
+.article{
+	height: 900px;
+}
+
+/*ーーー★オールブログの始まり★ーーー*/
+.blogcontent p{
+	font-size: 14px;
+	font-family: source-han-sans-japanese,sans-serif;
+    font-weight: 400;
+}
+.blogcontent .btn{
+	margin-top: 5px;
+	margin-left: 180px;
+	background-color: #ffffff;
+}
+.blogcontent .btn:hover{
+	transition: background-color .25s;
+	background-color: #B4B4B4;
+}
+.allblog_box img{
+	width: 100%;
+}
+.allblog_box:hover{
+	transform: translateY(-10px);
+	transition-duration: .5s;
+}
+.allblog_box{
+	margin-top: 100px;
+	width: 265px;
+	height:300px;
+	float:left;
+	border: 1px solid;
+	padding: 15px;
+	background-color: #F8F8F4;
+	margin-right: 20px;
+}
+
+/*ーーー★ブログの始まり★ーーー*/
+.blogmain{
+	background-color: #FFE6E7;
+	width: 700px;
+	border: 1px solid;
+	float: left;
+	font-family: source-han-sans-japanese,sans-serif;
+	padding: 10px;
+	
+}
+
+.blogmain h1{
+	font-size: 30px;
+	margin: 20px;
+	background-color: #ffffff;
+}
+.blogmain h2{
+	font-size: 18px;
+	margin: 50px 20px 0;
+	background:linear-gradient(transparent 70%, #ffffff 0%);
+	display: inline-block;
+	
+}
+.blogmain h3{
+	font-size: 18px;
+	margin: 50px 20px 0;
+	border-left: 10px solid #CA2547;
+	padding-left: 10px;
+}
+.blogmain p{
+	font-size: 16px;
+	margin: 30px 20px;
+}
+.blogmain img{
+	display: block;
+	width: 100%;
+	margin: 20px auto 0 ;
+}
+
+
+/*ーーーサイドバー始まりーーー*/
+.sidebar{
+	width: 220px;
+	float: right;
+	margin-top: 0;
+	padding: 0;
+}
+.sideprofile{
+	text-align: center;
+	border: 1px solid;
+	padding: 5px;
+	font-family: source-han-sans-japanese,sans-serif;
+	background-color: #ffffff;
+	margin-bottom: 30px;
+}
+.sideprofile:hover{
+	background-color: #FFDDDD;
+}
+.sideprofile h1{
+	font-size: 20px;
+	margin-bottom: 0;
+}
+.sideprofile p{
+	font-size: 15px;
+	margin: 3px;
+	color: #000000;
+}
+.sideprofile img{
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+/*-----------------目次----------------------*/
+.mokuji{
+	text-align: right;	
+}
+
+.mokuji a:hover{
+	background-color:#E4E4E4;
+	border-radius: 20px 0 0 20px;
+	padding-left: 20px;
+}
+.mokuji h2{
+	font-size: 16px;
+	display: inline-block;
+	border-radius: 20px 0 0 20px;
+	color: #ffffff;
+	padding-left: 20px;
+	border: none;
+	text-shadow: none;
+	background-color: #FFCBCC;
+}
+.mokuji h2:hover{
+	background-color:#E4E4E4;
+	padding:0;
+}
+.mokuji p{
+	font-size: 13px;
+	line-height: 25px;
+}
+
+/*ーーーブログの下の案内始まりーーー*/
+.blogbottom{
+	height:350px;
+	clear: both;
+	margin: 0;
+}
+.blogbottom_content img{
+	width: 100%;
+}
+.blogbottom_content:hover{
+	transform: translateY(-5px);
+	transition-duration: .5s;
+}
+.blogbottom_content{
+	width: 265px;
+	height:200px;
+	float:left;
+	border: 1px solid;
+	padding: 20px;
+	background-color: #F8F8F4;
+	margin: 30px 20px 0px 40px;
+}
+.blogbottom p{
+	text-align: center;
+	margin-top: 10px;
+	}
