@@ -33,21 +33,14 @@ a{
 a:hover{
 	text-decoration: underline;
 }
-
+・
 header{
 	width: 100vw;
 	height:80px;
 	margin: 0 auto;
 	background-color: #ffffff;
 	margin-bottom: 0;
-}
-#wrap{
-	margin:0 auto;
-	clear:both;
-}
-.content{
-	margin:0 auto;
-	width:960px;
+	position:fixed;
 }
 .logo{
 	float: left;
@@ -55,14 +48,15 @@ header{
 	margin-left: 3%;
 	background-image: url("../images/cherry.png");
 	background-position: 80% 0%;
-	background-size: 75px;
+	background-size: 80px;
 	background-repeat: no-repeat;
-	height: 100%;
 }
 @media screen and (max-width:599px){
 	.logo{
-		margin:0 38%;
+		margin:0 30%;
 		width: 200px;
+		background-size: 30px;
+		background-position: 100% 0%;
 	}
 }
 .logo a{
@@ -71,6 +65,7 @@ header{
 	font-size: 16px;
 	color:#000000;
 }
+/*ロゴの改行をなしに*/
 @media screen and (max-width:599px){
 	.logo br{
 		display:none;
@@ -81,10 +76,17 @@ header{
 	background-color: #FFC3C4;
 	background-color: rgba(255,216,216,0.5);
 }
-.logotoka{
-	background-color: rgba(255,255,255,0.1);
+#wrap{
+	margin:0 auto;
+	clear:both;
 }
-
+.content{
+	margin:0 auto;
+	width:100vw;
+}
+/*
+グローバルナビ始まり
+*/
 .global-nav{
 	float: right;
 	margin-top: 2%;
@@ -120,22 +122,91 @@ header{
 	text-decoration: none;
 }
 
+
+/*フッター*/
+.footerFixed{
+	min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+    position: relative;/* ←相対位置 */
+    padding-bottom: 40px; /* ←フッターの高さを指定 */
+    box-sizing: border-box;
+    /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+}
 footer{
 	text-align: center;
 	color: #413636;
 	padding: 20px 0;
 	background-color: #353131;
 	margin-top: 100px;
+	width:100vw;
+	display:block;
+	position: absolute;/* ←絶対位置 */
+    bottom: 0;
 }
 
 footer small{
 	font-size: 12px;
 	color: #ffffff;
 }
+/*ーーーーーー戻るボタン始まりーーーー*/
+html{
+    scroll-behavior: smooth;
+}
+.gotop{
+    display: block;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background: #FFF;
+    border: 1px solid #999;
+	border-radius: 30px;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 85%;
+    text-decoration: none;
+    color: #333;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+.gotop::before{
+    content: "";
+    display: block;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    width: 30%;
+    height: 30%;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+	transform: rotate(-45deg);
+}
+.gotop:hover{
+    opacity: 1;
+}
+@media(max-width:750px){
+    .gotop{
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+		text-indent: -9999px;
+        border: none;
+        bottom: 10px;
+        right: 10px;
+    }
+    .gotop::before{
+        bottom: 0;
+    }
+}
+/*ーーーーーー戻るボタン終わりーーーー*/
 .top-image{
-	width: 100%;
-	margin-top: 0;
-	padding-top: 0;
+	width: 100vw;
+	margin:0;
+	padding:0;
 }
 
 .clearfix:after{
@@ -148,59 +219,70 @@ footer small{
 .whatisblog{
 	width: 100vw;
 	margin: 50px auto;
-	height: 500px;
+	height: 600px;
 	background-image:url(../images/cherry.png);
-	background-color: rgba(255, 255, 255, 0.362);
+	background-color: rgba(255, 255, 255, 0.5);
 	background-repeat: no-repeat;
-	background-size: 600px;
-	background-position: 90% 0%;
-	text-align: left;
+	background-size: 40%;
+	background-position:center;
 	font-family: source-han-sans-japanese,sans-serif;
 	font-style: normal;
+	text-align:center;
 }
 @media screen and (max-width:599px){
 	.whatisblog{
 		width:100vw;
 		word-wrap: keep-all;
-		border: 1px solid;
-		float:left;
 		text-align:left;
 		height:auto;
+		margin:30px 0;
+		background-size: 80%;
 	}
 }
 
 .whatisblog h1{
 	font-size: 30px;
-	font-weight: 700;
-	margin-bottom: 50px;
-	margin-top: 40px;
+	margin:0;
+	padding:100px 0 120px 0;
 }
-
+@media screen and (max-width:599px){
+	.whatisblog h1{
+		padding:0 0 100px 0;
+	}
+}
 .whatisblog p{
 	font-size: 16px;
-    font-weight: 400;
-	line-height: 100%;
-	margin: 15px;
-	color: #000000;
-	text-shadow: 0px 1px 1px #fff;
+	text-shadow: 0px 1px 1px #000;
+	color:#fff;
+	padding:10px;
 }
-
-.text{
-	width: 960px;
-	padding-bottom: 10px;
+@media screen and (max-width:599px){
+	.whatisblog p{
+		text-shadow: none;
+		background-color: rgba(0, 0, 0, 0.2);
+		margin:10px;
+		display:inline-block;
+	}
 }
-
 /*ここからリスト*/
 .list{
-	clear:both;
-	width: 960px;
-	height:750px;
+	margin:0 auto;
+	padding:100px 20px;
+	width:80%;
 	background-color: #F9ABC3;
+	text-align:center;
+	display: flex;
+	justify-content:space-around;
 }
+.list-two{
+	background-color: #fff;
+}
+
 @media screen and (max-width:599px){
 	.list{
 		width:100vw;
-		height:1500px;
+		display:block;
+		padding:60px 0;
 	}
 }
 
@@ -217,20 +299,20 @@ footer small{
 	background-color: #AE648F;
 	width: 430px;
 	height: 650px;
-	float: left;
-	margin: 45px 25px;
 	border-radius: 40px;
 	background-image:url("../images/purin_foto.png"),url(../images/pafe.png);
 	background-repeat: no-repeat;
 	background-position: 250px 30px,-80px 450px;
 	background-size: 70%;
 	border: 1px solid;
+
 }
 @media screen and (max-width:599px){
 	.area{
 		clear:both;
 		width: 80%;
 		margin-left:10%;
+		margin-bottom:30px;
 	}
 }
 
@@ -272,13 +354,12 @@ footer small{
 
 .blog{
 	background-color: #ffffff;
-	width: 420px;
+	width: 430px;
 	height: 650px;
 	text-align: center;
-	float: left;
-	margin: 45px 25px;
 	border: 1px solid;
 	border-radius: 40px;
+	position:relative;
 }
 
 @media screen and (max-width:599px){
@@ -286,29 +367,14 @@ footer small{
 		width: 80%;
 		margin-left:10%;}
 }
-.blog p{
-	font-size: 16px;
-	background-color: #ffffff;
-	padding: 0px 5px;
-	float: left;
-	margin-top: 8px;
-	margin-left: 5px;
-	margin-bottom: 30px;
+.blog h1{
+	margin-bottom:0;
 }
-
-.blog .daimei{
-	font-size: 18px;
-	background-color: #ffffff;
-	text-align: center;
-	padding: 0px 5px;
-	margin-left: 60px;
-	margin-top: 5px;
-}
-
 .blog img{
 	display: block;
 	clear: both;
 	margin: auto;
+	margin-top:40px;
 	border: 1px solid;
 	width: 70%;
 }
@@ -316,53 +382,35 @@ footer small{
 	transform:translateY(-10px);
 	transition-duration:.3s;
 }
-.more{
-	background-color: #ffffff;
-	text-align: center;	
-	display: inline-block;
-	border: 1px solid;
-	clear: both;
-	transition: background-color .2s;
-}
-
-.blog .more{
-	margin-left: 54%;
-	padding: 8px;
-}
-.tokusyu .more{
+.blog h3{
 	font-size: 16px;
-	margin-left: 54%;
-	background-color: #ffffff;
-	padding: 8px;
-	transition: background-color .2s;
+	padding: 0px 5px;
+	margin-bottom:5px;
+	margin-top: 2px;
+	font-family:source-han-sans-japanese,sans-serif;
 }
-.more:hover{
-	background-color: #FFE8F5;
+.blog p{
+	font-size: 16px;
+	float:right;
+	margin:0;
+	margin-right:30px;
+	border:1px solid;
 }
-
+.blog .btn{
+	padding:5px 20px;
+	position:absolute;
+	top:97%;
+	left:80%;
+}
 /*特集記事と週間ランキングのセクション始まり*/
-.tokusyuandranking{
-	width: 960px;
-	height:850px;
-	margin-top: 80px;
-	clear: both;
-}
-
-@media screen and (max-width:599px){
-	.tokusyuandranking{
-		height: 1700px;
-		width:100vw;}	
-}
 
 /*特殊記事始まり*/
-.tokusyu {
+.feature{
 	width: 470px;
-	height: 800px;
 	text-align: center;
-	float: left;
 }
 @media screen and (max-width:599px){
-	.tokusyu {
+	.feature{
 		width: 80%;
 		margin-left:10%;
 		clear:both;
@@ -373,7 +421,7 @@ footer small{
 	}
 }
 
-.tokusyu h1{
+.feature h1{
 	font-size: 60px;
 	text-align: center;
 	padding: 0px;
@@ -391,10 +439,10 @@ footer small{
     0px -1px #000;
 }
 @media screen and (max-width:599px){
-	.tokusyu h1{
+	.feature h1{
 		color: #C796FF;}
 }
-.tokusyu p{
+.feature p{
 	font-size: 18px;
 	padding: 7px 0;
 	margin: 30px 50px 0px;
@@ -402,25 +450,29 @@ footer small{
 	color:#000000;
 }
 @media screen and (max-width:599px){
-	.tokusyu p{
+	.feature p{
 		background-color: #FFCCF4;}
 }
-.tokusyu img{
+.feature img{
 	padding:10px;
 	margin: 10px auto 0;
 	height: 200px;
 	display:block;
 }
-.tokusyu img:hover{
+.feature img:hover{
 	transform: translateY(-5px);
 	transition-duration: .5s;
+	
+}
+.feature .btn{
+	margin-left:55%;
+	margin-top:5%;
+	padding:5px 20px;
 }
 
 /*週間ランキング始まり*/
 .ranking{
 	width: 450px;
-	height: 720px;
-	float: left;
 	margin-left: 38px;
 	background-color: #f999b7;
 	border-radius: 30px 0 0 30px;
@@ -430,6 +482,7 @@ footer small{
 		clear:both;
 		width: 80%;
 		margin-left:10%;
+		padding-bottom:20px;
 		}
 }
 
@@ -437,14 +490,15 @@ footer small{
 .ranking h1{
 	text-align: center;
 	font-size: 20px;
-	margin-top: 20px;
+	margin:0;
+	padding-top:20px;
 	color: #ffffff;
 }
 /*1.2.3*/
 .ranking h2{
 	font-family: source-han-sans-japanese,sans-serif;
     color: white;
-	margin-left: 30px;
+	margin: 0 20px;
 	font-size: 80px;
 	border: none;
     text-shadow:
@@ -457,11 +511,14 @@ footer small{
     -1px 0px #000,
     0px -1px #000;
 }
-
+@media screen and (max-width:599px){
+	.ranking h2{
+		margin:3%;
+	}
+}
 .ranking img{
 	border: 1px solid;
 	width: 70%;
-	
 }
 /*王城ー上野(2022/5/1)*/
 .ranking p{
@@ -478,10 +535,54 @@ footer small{
 }
 
 /*★★ーーーーー都心６区ここから★★ーーー----------------------ー*/
+.area-bar{
+	margin-top:5px;
+}
+.area-bar ul{
+	width:100vw;
+	background-color: #EEDBFD;
+	margin-top:5px;
+	display:flex;
+}
+.area-bar li{
+	float:left;
+	list-style:none;
+	border-right:1px solid #fff;
+	font-size:14px;
+	padding:0.3em 0.7em;
+}
+.area-bar-caption{
+	padding:0 10px;
+	font-size:14px;
+	background-color:#C5C6FF;
+}
+
+@media screen and (max-width:599px){
+	.area-bar{
+		visiblity:visible;
+		}
+}
+@media screen and (min-width:599px){
+	.area-bar{
+		display:none;
+		}
+}
+/*エリアメインスタート*/
 .areamain{
 	border: 1px solid;
-	width: 720px;
+	width: 77%;
 	float: left;
+	margin-top:50px;
+	margin-left:3%;
+	box-sizing:border-box;
+	padding:3%;
+	
+}
+@media screen and (max-width:599px){
+	.areamain{
+		margin-left:0;
+		width:100vw;
+	}
 }
 .areamain img{
 	border: 1px solid #000000;
@@ -494,7 +595,7 @@ footer small{
 .areamain h1,h2{
 	font-family: source-han-sans-japanese,sans-serif;
     color: #ffffff;
-	font-size: 80px;
+	font-size: 30px;
 	padding: 0;
 	margin: 0;
     text-shadow:
@@ -507,14 +608,63 @@ footer small{
     -1px 0px #000,
     0px -1px #000;
 }
+.areamain h1{
+	margin-top:3%;
+}
 .areamain h2{
-	font-size: 50px;
+	font-size: 70px;
 }
 .areamain h3{
 	font-size:  16px;
 	margin: 5px 0px 0px 40px;
 	text-align: left;
 }
+
+.box p{
+	font-size: 14px;
+	margin: 5px 0 0 0px;
+	text-align: left;
+	padding-left: 40px;
+}
+
+/*都心６区の基本設定*/
+.ku{
+	border: 1px solid;
+	text-align: center;
+	margin: 50px auto 100px;
+	padding-bottom:60px;
+	clear: both;
+}
+@media screen and (max-width:599px){
+	.ku{
+		width:100%;}
+}
+
+.boxarea{
+	display:flex;
+	flex-wrap: wrap;
+}
+@media screen and (max-width:599px){
+	.boxarea{
+		width:100%;}
+}
+/*全てのエリアボックス設定*/
+.box{
+	width: 265px;
+	height:400px;
+	float:left;
+	margin-left: 55px;
+	margin-top: 30px;
+	border: 1px solid;
+	background-color: #F8F8F4;
+}
+
+.box:hover{
+	transform: translateY(-5px);
+	transition-duration: .5s;
+	
+}
+
 /*---------------ボタン始まり-------------------*/
 .btn{
 	background-color: #ffffff;
@@ -525,12 +675,15 @@ footer small{
 	border-radius: 20px;
 	border: 1px solid;
 	text-align: center;
-	margin-right: 120px;
 }
 .btn:hover{
 	transition: background-color .25s;
 	background-color: #B4B4B4;
 
+}
+#area .btn{
+	margin-right: 120px;
+	margin-top:10px;
 }
 #area .btn:hover{
 	background-color: #ABD9D0;
@@ -551,69 +704,7 @@ footer small{
 	margin-right: 110px;
 }
 /*---------------ボタン終わり-------------------*/
-.box p{
-	font-size: 14px;
-	margin: 5px 0 0 0px;
-	text-align: left;
-	padding-left: 40px;
-}
-#area_sidebar h1{
-	font-size: 16px;
-	color: #ffffff;
-}
-#area_sidebar h2{
-	font-size: 16px;
-	color: #000000;
-	text-shadow: none;
-}
-
-/*都心６区の基本設定*/
-.ku{
-	width: 650px;
-	height: 1200px;
-	border: 1px solid;
-	text-align: center;
-	margin: 50px auto;
-	clear: both;
-	margin-bottom: 100px;
-	background-color: #d2bbf6;
-}
-/*全てのエリアボックス設定*/
-.box{
-	width: 265px;
-	height:400px;
-	float:left;
-	margin-left: 40px;
-	margin-top: 30px;
-	border: 1px solid;
-	background-color: #F8F8F4;	
-}
-.box:hover{
-	transform: translateY(-5px);
-	transition-duration: .5s;
-}
-/*4段のエリアの高さ調整*/
-.shinjyuku{
-	height: 2000px;
-}
-/*３段のエリアの高さ調整*/
-/**.shinjyuku{
-	height: 1600px;
-}*/
-/*２段のエリアの高さ調整*/
-.tiyoda{
-	height: 1200px;
-}
-
-/*1段のエリアの高さ調整*/
-.suginami, .nerima, .toshima,
-.itabashi, .arakawa , .kita, 
-.setagaya, .meguro, .shinagawa, .ota,
-.adachi, .koto, .sumida, .katsushika, .edogawa, .taito, 
-.bunkyo, .minato, .tyuo, .shibuya{
-	height: 800px;
-}
-/*エリアごとの背景カラー*/
+/*ーーーーーーーーーエリアごとの背景カラーーーーーーーーーー*/
 #area .ku{
 	background: #D6FFF7;
 }
@@ -629,73 +720,33 @@ footer small{
 #south_area .ku{
 	background: #F5FFBF;
 }
-/**★★大エリアに入る★★**/
-/*
-.areabetsu{
-	width: 960px;
-	height:1300px;
-	background-color: #FCE87D;
-	background-image:url(../images/purin.png),url(../images/pafe.png);
-	background-repeat: no-repeat;
-	background-position: 700px 0px,-100px 800px;
-	background-size: 400px,500px;
-	border: 1px solid;
+/*スマホではエリアのサイドバーは表示しない*/
+@media screen and (max-width:599px){
+	#area .sidebar, #east_area .sidebar, 
+	#south_area .sidebar, #north_area .sidebar, 
+	#west_area .sidebar{
+		display: none;
+	}
 }
-
-.areabetsu h1{
-	text-align: center;
-	margin: 0px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-family: source-han-sans-japanese,sans-serif;
-    color: #ffffff;
-	font-size: 50px;
-    text-shadow:
-    1px 1px #000,
-    -1px 1px #000,
-    -1px -1px #000,
-    1px -1px #000,
-    1px 0px #000,
-    0px 1px #000,
-    -1px 0px #000,
-    0px -1px #000;
-}
-
-.areabetsu table{
-	width:700px;
-	margin: 0px auto 30px;
-	background-color: #ffffff;
-	border: 7px solid #6A4444;
-	border-radius: 30px;
-}
-.areabetsu th{
-	font-size: 20px;
-	width: 150px;
-}
-.areabetsu td:nth-of-type(1){
-	font-size: 17px;
-	width: 150px;
-	text-align: center;
-}
-.areabetsu td:nth-of-type(2){
-	font-size: 14px;
-	padding-left: 20px;
-}
-
-*/
 /*ーーー★★kissaten.html始まり★★ーーー*/
-#kissaten .content{
-	width: 960px;
-}
+
 .leftcontent{
-	width: 615px;
+	width: 60%;
 	height: 1050px;
 	background-color: #E3E4FF;
 	text-align: center;
 	float: left;
+	margin: 50px 10%;
+	box-sizing:border-box;
 }
-.leftcontent h2,h3,p{
-	font-size: 20px;
+@media screen and (max-width:599px){
+	.leftcontent{
+		width:100vw;
+		margin:0;
+		padding-bottom:50px;
+	}
+}
+.leftcontent h2,p{
 	text-shadow: none;
 	color: #7F7F7F;
 	margin: 0;
@@ -710,13 +761,14 @@ footer small{
 }
 .leftcontent h2{
 	margin-bottom: 10px;
+	font-size: 20px;
 }
 .leftcontent p{
 	font-size: 16px;
-	margin: 30px 20px;
+	margin: 30px 15%;
 	background-color: #ffffff;
-	border-radius: 30px;
-	padding: 10px;
+	border-radius: 40px;
+	padding: 3%;
     font-weight: 400;
 }
 
@@ -726,11 +778,16 @@ footer small{
 }
 /*喫茶店の説明初め*/
 .version{
-	width: 550px;
+	width: 80%;
 	height: 300px;
 	background-color: #ffffff;
 	border-radius: 20px;
-	margin: 30px auto;
+	margin: 30px auto 0;
+}
+@media screen and (max-width:599px){
+	.version{
+		width:90vw;
+	}
 }
 .version img{
 	height: 200px;
@@ -740,13 +797,23 @@ footer small{
 	border-radius: 20px;
 	border: 3px solid;
 }
+@media screen and (max-width:599px){
+	.version img{
+		margin:30px;
+	}
+}
 .version h3{
-	margin:0;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	text-align: left;
 	padding-top: 45px;
 	border: none;
+}
+@media screen and (max-width:599px){
+	.version h3{
+		margin:0;
+		padding-top:10px;
+	}
 }
 .version p{
 	text-align: left;
@@ -756,16 +823,35 @@ footer small{
 	margin: 0;
 }
 
+@media screen and (max-width:599px){
+	.version p{
+		font-size:14px;
+		margin:0px;
+	}
+}
+
 /*ーーー★★プロフィールページの始まり★★ーーー*/
 .profile{
 	height: 500px;
-	width: 960px;
+	width: 100vw;
 	text-align: center;
 	font-family: source-han-sans-japanese,sans-serif;
+	margin:0 auto;
 }
+@media screen and (max-width:599px){
+	.profile{
+		width:100vw;
+	}
+}
+
 .profile h1{
-	sont-size: 35px;
+	font-size: 35px;
 	margin-bottom: 0;
+}
+@media screen and (max-width:599px){
+	.profile h1{
+		margin-top:50px;
+	}
 }
 .profile img{
 	height: 300px;
@@ -789,95 +875,169 @@ footer small{
 	font-family: source-han-sans-japanese,sans-serif;
     font-weight: 400;
 }
+@media screen and (max-width:599px){
+	.profiletext p{
+		font-size:15px;
+	}
+}
 /*SNS始まり*/
-.instagram, .twitter, .youtube{
-	margin-top: 20px;
-	padding: 0;
-	border: 1px solid;
-	width: 960px;
-	height: 325px;
+.sns-area{
+	width:100vw;
+	display:flex;
+	justify-content: space-between;
+	margin-bottom:100px;
+	padding:2%;
+	box-sizing:border-box;
 }
-.instagram:hover, .twitter:hover, .youtube:hover{
-	transform:translateY(-5px);
-	transition-duration: .2s;
-	box-shadow: 0 10px 10px 0; 
-}
-.instagram img, .twitter img ,.youtube img {
-	margin-left: 30px;
-}
-.twitter_ex{
-	width: 260px;
-	margin-left: 100px;
-}
-.youtube_ex{
-	width: 350px;
-	margin-bottom: 60px;
-}
-
 .sns h1{
 	text-align: center;
 	border: 1px solid;
 	background-color: rgba(21,138,26,0.6);
 	color: aliceblue;
-	margin: 50px 0;
+	margin: 50px 0 100px;
 }
-
+.sns h2{
+	font-size:40px;
+	text-align:center;
+	margin-bottom:10px;
+}
+.snsmedia{
+	width:30%;
+	border:1px solid;
+}
+.snsmedia img{
+	width:100%;
+	text-align:center;
+	margin:0;
+	border-top:1px solid;
+}
+@media screen and (max-width:599px){
+	.sns-area{
+		display:block;
+	}
+	.snsmedia{
+		width:80%;
+		margin:20px auto;
+	}
+}
 /*ーーー★★特集ページの始まり★★ーーー*/
+
 #tokusyu .content{
 	background-color: #FF8082;
+	padding-bottom:100px;
+	width:100vw;
 }
 
-.article h1{
+.top img{
+	width:70%;
+	margin-left:15%;
+}
+@media screen and (max-width:599px){
+	.top img{
+		width:100%;
+		margin:50px auto 0;
+	}
+}
+#tokusyu h1{
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom:100px;
 	color: #ffffff;
 }
+.article{
+	display:flex;
+	justify-content:space-around;
+	margin-bottom:120px;
+}
+@media screen and (max-width:599px){
+	.article{
+		display:block;
+	}
+}
+.article_box{
+	position:relative;
+}
+@media screen and (max-width:599px){
+	.article_box{
+		margin:0 auto 120px;
+	}
+}
 .article img{
-	width: 70%;
-	margin: 0;
+	width:300px;
+	border:15px solid #fff;
+	margin: 0 40px;
 }
 .article img:hover{
 	transform: translateY(-10px);
 	transition-suration: .5s;
 }
-
+@media screen and (max-width:599px){
+	.article img{
+		text-align:center;
+	}
+}
 #tokusyu .btn{
 	display: block;
 	position: absolute;
-	top: 260px;
-	left: 300px;
+	top: 95%;
+	left: 70%;
 }
-
-.tokusyu_box{
-	width: 470px;
-	height: 300px;
-	float: left;
-	position: relative;
-}
-#imagetwo,#imagefour{
-	border: 10px solid #ffffff;
-	margin-top: 20px;
-	margin-left: 55px;
-	padding: 0;
-}
-#imageone,#imagethree{
-	border: 10px solid #ffffff;
-	margin-top: 20px;
-	margin-left: 85px;
-	padding: 0;
-}
-
-.article{
-	height: 900px;
+@media screen and (max-width:599px){
+	#tokusyu .btn{
+		top:97%;
+		left:60%;
+	}
 }
 
 /*ーーー★オールブログの始まり★ーーー*/
+.allblog{
+	width:100vw;
+}
+.allblog img{
+	border: 1px solid;
+	width:90vw;
+	display:block;
+	margin:0 auto;
+}
+.blogcontent{
+	width:100vw;
+	display:flex;
+	justify-content: center;
+}
+@media screen and (max-width:599px){
+	.blogcontent{
+		display:block;
+	}
+}
 .blogcontent p{
 	font-size: 14px;
 	font-family: source-han-sans-japanese,sans-serif;
-    font-weight: 400;
 }
-.blogcontent .btn{
+
+.allblog_box{
+	margin: 100px 50px;
+	width: 265px;
+	height:300px;
+	float:left;
+	border: 1px solid;
+	padding: 15px;
+	background-color: #F8F8F4;
+}
+@media screen and (max-width:599px){
+	.allblog_box{
+		margin:20px auto;
+		float:none;
+	}
+}
+.allblog_box img{
+	width: 100%;
+	margin:0;
+}
+.allblog_box:hover{
+	transform: translateY(-10px);
+	transition-duration: .5s;
+}
+#allblog .btn{
 	margin-top: 5px;
 	margin-left: 180px;
 	background-color: #ffffff;
@@ -886,43 +1046,44 @@ footer small{
 	transition: background-color .25s;
 	background-color: #B4B4B4;
 }
-.allblog_box img{
-	width: 100%;
-}
-.allblog_box:hover{
-	transform: translateY(-10px);
-	transition-duration: .5s;
-}
-.allblog_box{
-	margin-top: 100px;
-	width: 265px;
-	height:300px;
-	float:left;
-	border: 1px solid;
-	padding: 15px;
-	background-color: #F8F8F4;
-	margin-right: 20px;
-}
-
 /*ーーー★ブログの始まり★ーーー*/
 .blogmain{
 	background-color: #FFE6E7;
-	width: 700px;
+	width: 60%;
 	border: 1px solid;
 	float: left;
 	font-family: source-han-sans-japanese,sans-serif;
 	padding: 10px;
-	
+	margin:50px 5%;
+} 
+@media screen and (max-width:599px){
+	.blogmain{
+		width:100vw;
+		float:none;
+		padding:10px 0;
+		border:none;
+	}
 }
-
+@media screen and (max-width:599px){
+	#blog{
+		width:100vw;
+	}
+}
 .blogmain h1{
 	font-size: 30px;
-	margin: 20px;
+	margin: 20px 30px;
 	background-color: #ffffff;
+	padding:5px;
+}
+@media screen and (max-width:599px){
+	.blogmain h1{
+		text-align:center;
+	}
 }
 .blogmain h2{
 	font-size: 18px;
 	margin: 50px 20px 0;
+	color:#fff;
 	background:linear-gradient(transparent 70%, #ffffff 0%);
 	display: inline-block;
 	
@@ -946,16 +1107,23 @@ footer small{
 
 /*ーーーサイドバー始まりーーー*/
 .sidebar{
-	width: 220px;
+	width: 20%;
 	float: right;
-	margin-top: 0;
-	padding: 0;
+	padding-left:2%;
+	box-sizing:border-box;
+	margin:50px 0;
 }
+@media screen and (max-width:599px){
+	.sidebar{
+		display:none;
+	}
+}
+
 .sideprofile{
 	text-align: center;
 	border: 1px solid;
 	padding: 5px;
-	font-family: source-han-sans-japanese,sans-serif;
+	font-family:sans-serif;
 	background-color: #ffffff;
 	margin-bottom: 30px;
 }
@@ -963,7 +1131,7 @@ footer small{
 	background-color: #FFDDDD;
 }
 .sideprofile h1{
-	font-size: 20px;
+	font-size: 16px !important;
 	margin-bottom: 0;
 }
 .sideprofile p{
@@ -972,7 +1140,7 @@ footer small{
 	color: #000000;
 }
 .sideprofile img{
-	width: 80%;
+	width: 70%;
 	margin-bottom: 10px;
 }
 
@@ -1026,6 +1194,11 @@ footer small{
 	padding: 20px;
 	background-color: #F8F8F4;
 	margin: 30px 20px 0px 40px;
+}
+@media screen and (max-width:599px){
+	.blogbottom_content{
+		margin:0 atuo;
+	}
 }
 .blogbottom p{
 	text-align: center;
