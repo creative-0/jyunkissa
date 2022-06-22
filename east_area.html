@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>純喫茶ラブ|城東エリア</title>
+<title>純喫茶クラブ</title>
 	<script>
   (function(d) {
     var config = {
@@ -14,11 +14,13 @@
   })(document);
 </script>
 <link href="css/style.css" rel="stylesheet">
-<link rel="icon" href="images/favicon.ico" id="favicon">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="icon" href="favicon/favicon.ico" id="favicon">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body id="east_area">
+	<div class="footerFixed">
 	<header>
 		<div class="logo">
 		<div class="logotoka">
@@ -37,11 +39,54 @@
 	
 　　<div id="wrap">
 	<div class="content clearfix">
+		<!--スマホのみ表示のエリアバー-->
+		<div class="area-bar clearfix">
+			<ul class="area-bar-ul clearfix">
+			<a href="area.html"><li class="area-bar-caption">都心</li></a>
+			<a href="area.html#shibuyaku"><li>渋谷</li></a>
+			<a href="area.html#shinjyukuku"><li>新宿</li></a>
+			<a href="area.html#bunkyoku"><li>文京</li></a>
+			<a href="area.html#tiyodaku"><li>千代田</li></a>
+			<a href="area.html#minatoku"><li>港</li></a>
+			<a href="area.html#tyuoku"><li>中央</li></a>
+		</ul>
+			
+		<ul class="area-bar-ul clearfix">
+			<a href="west_area.html"><li class="area-bar-caption">城西</li></a>
+			<a href="west_area.html#nakanoku"><li>中野</li></a>
+			<a href="west_area.html#suginamiku"><li>杉並</li></a>
+			<a href="west_area.html#nerimaku"><li>練馬</li></a>
+			<a href="west_area.html#toshimaku"><li>豊島</li></a>
+		</ul>
+			<ul class="area-bar-ul clearfix">
+			<a href="north_area.html"><li class="area-bar-caption">城北</li></a>
+			<a href="north_area.html#itabashiku"><li>板橋</li></a>
+			<a href="north_area.html#arakawaku"><li>荒川</li></a>
+			<a href="north_area.html#itabashiku"><li>北</li></a>
+		</ul>
+			<ul class="area-bar-ul clearfix">
+			<a href="south_area.html"><li class="area-bar-caption">城南</li></a>
+			<a href="south_area.html#setagayaku"><li>世田谷</li></a>
+			<a href="south_area.html#meguroku"><li>目黒</li></a>
+			<a href="south_area.html#shinagawaku"><li>品川</li></a>
+			<a href="south_area.html#otaku"><li>大田</li></a>
+		</ul>
+			<ul class="area-bar-ul clearfix">
+			<a href="east_area.html"><li class="area-bar-caption">城東</li></a>
+			<a href="east_area.html#adatiku"><li>足立</li></a>
+			<a href="east_area.html#kotoku"><li>江東</li></a>
+			<a href="east_area.html#sumidaku"><li>墨田</li></a>
+			<a href="east_area.html#katsuhika"><li>葛飾</li></a>
+			<a href="east_area.html#edogawaku"><li>江戸川</li></a>
+			<a href="east_area.html#taitoku"><li>台東</li></a>
+		</ul>
+		</div>
 		<div class="areamain">
 		<!--足立区始まり-->	
 		<section class="adachi ku">
 			<h1>城東エリア</h1>
 			<h2 id="adachiku">足立区</h2>
+			<div class="boxarea">
 			<div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -54,12 +99,14 @@
 				<p>足立　--線</p>
 				<div class="btn">more</div>
 			    </div>
+			</div>
 			</section>
 			
 			<!--江東区始まり-->
 			<section class="koto ku">
 			<h1>城東エリア</h1>
 			<h2 id="kotoku">江東区</h2>
+				<div class="boxarea">
 				<div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -72,12 +119,14 @@
 				<p>江東　--線</p>
 				<div class="btn">more</div>
 			    </div>
+				</div>
 			</section>
 				
 				<!--墨田区始まり-->
 			<section class="sumida ku">
 				<h1>城東エリア</h1>
 				<h2 id="sumidaku">墨田区</h2>
+				<div class="boxarea">
 				<div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -90,12 +139,14 @@
 				<p>墨田　--線</p>
 				<div class="btn">more</div>
 			    </div>
+				</div>
 			</section>
 			
 			<!--葛飾区始まり-->
 		  <section class="katsushika ku">
 			  <h1>城東エリア</h1>
 			  <h2 id="katsushikaku">葛飾区</h2>
+			  <div class="boxarea">
 			  <div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -107,13 +158,15 @@
 				<h3>---</h3>
 				<p>葛飾　--線</p>
 				<div class="btn">more</div>
-			    </div>		
+			    </div>
+				 </div>
 				</section>
 			
 			<!--江戸川区区始まり-->
 			<section class="edogawa ku">
 			<h1>城東エリア</h1>
 			<h2 id="edogawaku">江戸川区</h2>
+				<div class="boxarea">
 			<div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -126,12 +179,14 @@
 				<p>江戸川　--線</p>
 				<div class="btn">more</div>
 			    </div>
+				</div>
 			</section>
 			
 			<!--台東区はじまり-->
 			<section class="taito ku">
 			<h1>城東エリア</h1>
 			<h2 id="taitoku">台東区</h2>
+				<div class="boxarea">
 			<div class="box">
 				<img src="images/image_ex.jpg" alt="左の写真">
 				<h3>---</h3>
@@ -143,7 +198,8 @@
 				<h3>---</h3>
 				<p>浅草　--線</p>
 				<div class="btn">more</div>
-		    </div>
+					</div>
+				</div>
 			</section><!--港区終わり-->
 		</div><!--都心エリア終わり-->
 		
@@ -197,10 +253,10 @@
 	  </div>
 	</div><!--コンテンツ終わり-->
 	</div><!--wrap終わり-->
-	
+	<a href="#" class="gotop"></a>
 　　<footer>
 	<small>(c)2022 reira-studio.</small>
 　　</footer>
-	
+	</div>
 </body>
 </html>

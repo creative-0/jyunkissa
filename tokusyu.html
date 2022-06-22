@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>純喫茶ラブ|特集記事</title>
+<title>特集記事</title>
 	<script>
   (function(d) {
     var config = {
@@ -14,11 +14,13 @@
   })(document);
 </script>
 <link href="css/style.css" rel="stylesheet">
-<link rel="icon" href="images/favicon.ico" id="favicon">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="icon" href="favicon/favicon.ico" id="favicon">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body id="tokusyu">
+	<div class="footerFixed">
 	<header>
 		<div class="logo">
 			<div class="logotoka">
@@ -37,37 +39,41 @@
 	
 　　<div id="wrap">
 	<div class="content">
-		<div class="top">
+		<div class="top"><!--トップイメージ画像-->
 		<img src="images/tokusyu.png" alt="トップ画像">
 		</div>
-		<div class="article clearfix">
-			<h1>- 特集記事 -</h1>
-			<div class="tokusyu_box">
-			<img src="images/kuriso_a.png" alt="" id="imageone">
+		
+		<h1>- 特集記事 -</h1>
+		<div class="article"><!--１列目初め-->
+			
+			<div class="article_box"><!--1-->
+			<img src="images/kuriso_a.png" alt="" id="imageone" class="article_box">
 				<div class="btn">more</div>
 			</div>
 			
-			<div class="tokusyu_box">	
+			<div class="article_box"><!--2-->	
 			<img src="images/paferanking_a.png" alt="" id="imagetwo">
 				<div class="btn">more</div>
 			</div>
-			
-			<div class="tokusyu_box">
+		</div><!--１列目終わり-->
+		
+		<div class="article"><!--２列目初め-->	
+			<div class="article_box"><!--3-->
 			<img src="images/image_a.png" alt="" id="imagethree">
-				<div class="btn">more</div>
-			</div>
-			<div class="tokusyu_box">
-			<img src="images/image_a.png" alt="" id="imagefour">
-				<div class="btn">more</div>
+			<div class="btn">more</div>
 			</div>
 			
-		</div>
+			<div class="article_box"><!--4-->
+			<img src="images/image_a.png" alt="" id="imagefour">
+			<div class="btn">more</div>
+			</div>
+		</div><!--２列目終わり-->
 	</div>
 　　</div>
-	
+	<a href="#" class="gotop"></a>
 　　<footer>
 	<small>(c)2022 reira-studio.</small>
 　　</footer>
-	
+	</div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>純喫茶ラブ|プロフィール</title>
+<title>純喫茶クラブ</title>
 	<script>
   (function(d) {
     var config = {
@@ -14,11 +14,13 @@
   })(document);
 </script>
 <link href="css/style.css" rel="stylesheet">
-<link rel="icon" href="images/favicon.ico" id="favicon">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="icon" href="favicon/favicon.ico" id="favicon">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body id="profile">
+	<div class="footerFixed">
 	<header>
 		<div class="logo">
 		<div class="logotoka">
@@ -54,36 +56,38 @@
 			<p>見つけてもらうきっかけになれば嬉しいです。</p>
 		</div>
 		<!--sns始まり-->
-		<div class="sns clearfix">
-			<h1>SNS</h1>			
-			<!--instagram始まり-->
-			<a href="https://www.instagram.com/junkissa_cup_/"><div class="instagram">
-			<img src="images/instagram.jpg" alt="instagramrlogo">
-				<img src="images/instagram_left.jpg" alt="instagramのトップ">
-				<img src="images/instagram_middle.jpg" alt="instagramの投稿全体">
-				<img src="images/instagram_right.jpg" alt="instagramの投稿１つ">
-		  </div></a>
+		
+		<div class="sns clearfix">	
 			
-			<!--tweitter始まり-->
-			<a href="https://twitter.com/2KpomGoKmhBcGCB"><div class="twitter">
-				<img src="images/twitter.jpg" alt="twitter">
-				<img src="images/twitter_left.png" alt="twitter" class="twitter_ex">
-				<img src="images/twitter_right.png" alt="twitter" class="twitter_ex">
-				</div></a>
+			<h1>SNS</h1>
+			<div class="sns-area">
+			<!--instagram-->	
+				<section class="snsmedia instagram">
+				<h2>Instagram</h2>
+				<a href="https://www.instagram.com/junkissa_cup_/">
+					<img src="images/insta.jpg" alt="instagramの画像"></a>
+				</section>
 			
-			<!--youtube始まり-->
-			<a href="https://www.youtube.com/channel/UCeSabYwXN9pXFTZiq3s9WjA"><div class="youtube">
-				<img src="images/youtube.jpg" alt="twitter">
-			    <img src="images/youtube_ex.png" alt="youtubeの画像" class="youtube_ex">
-				<img src="images/youtube_sumne.png" alt="youtubeの画像" class="youtube_ex">
-			</div></a>
-		</div>										
+			<!--twitter-->	
+			<section class="snsmedia twitter">
+				<h2>Twitter</h2>
+				<a href="https://twitter.com/2KpomGoKmhBcGCB">
+					<img src="images/twitter_right.png" alt="twitterの画像"></a>
+			</section>
+			<!--youtube-->
+			<section class="snsmedia youtube">
+				<h2>Youtube</h2>
+				<a href="https://www.youtube.com/channel/UCeSabYwXN9pXFTZiq3s9WjA">
+					<img src="images/youtube_ex.png" alt="youtubeの画像"></a>
+			</section>
+		</div>
+		</div>
 	</div>
 	</div>
-	
+	<a href="#" class="gotop"></a>
 　　<footer>
 	<small>(c)2022 reira-studio.</small>
 　　</footer>
-	
+	</div>
 </body>
 </html>

@@ -32,14 +32,14 @@
 </head>
 
 <body id ="index">
+	<div class="footerFixed">
 	<header>
-		<div class="logo">
-		<div class="logotoka">
+		<div class="logo"><!--ヘッダーロゴ-->
 		<a href="index.html">東京純喫茶<br>ラブストーリ-</a>
 		</div>
-		</div>
+		
 		<nav>
-		<ul class="global-nav">
+		<ul class="global-nav"><!--ナビ-->
 			<li><a href="area.html">エリア</a></li>
 			<li><a href="allblog.html">ブログ</a></li>
 			<li><a href="tokusyu.html">特集記事</a></li>
@@ -51,30 +51,17 @@
 　　<div id="wrap">
 	  <img src = "images/top.png" alt="トップ画像" class="top-image">
 	  <div class="content">
-		  <div class="main-center">
-			   
-			  <div class="whatisblog">
-				  <h1>このブログは</h1>
-				  
-				  <div class="text a">
-					  <p>クリームソーダ、珈琲フロート、プリンアラモード</p>
-				  </div>
-				  
-				  <div class="text b">
-					  <p>目にも体にも優しい可愛い食べ物たちを求めたり、</p>
-					  <p>仕事や生活のストレスから逃れたかったり、</p>
-					  <p>純喫茶に癒しを求め駆け込んだ日々の</p>
-					  <p>記録がここにある。</p>
-				  </div>
-				  <div class="text c">
-					  <p>純喫茶はいつも私たちを癒してくれる。</p>
-					  <p>私にとっての宝物が誰かにとってもまた、</p>
-					  <p>宝物やお守りの存在になるような</p>
-					  <p>そんな純喫茶を見つけてもらえるきっかけに<br>ここがなることを願って。</p>
-				  </div>
-			  </div>
-			  
+		  <section class="whatisblog">
+			  <h1>このブログは</h1>
+			  <p>ここは純喫茶に癒しを求め駆け込んだ日々の記録の場です。</p>
+			  <p>可愛いグラスやカップ、お皿、<br>たっぷりのクリーム、優しい店主。</p>
+			  <p>純喫茶はいつも私たちを癒してくれる。</p>
+			  <p>私にとっての宝物が誰かにとってもまた、<br>宝物やお守りの存在になりますように。</p>
+		  </section>
+		  
+			   <!--１列目初め-->
 			  <div class="list">
+				   <!--純喫茶一覧スタート-->
 				  <section class="area">
 					  <h1>純喫茶一覧</h1>
 					  <table>
@@ -90,27 +77,31 @@
 							  <td>足立区　江東区　墨田区<br>葛飾区　江戸川区　台東区</td> </tr>
 					  </table>
                   </section>
-				  
+				   <!--ブログ記事一覧初スタート-->
 				  <section class="blog">
 				    <h1>ブログ記事一覧</h1>
 					  <a href="blog.html"><img src="images/gion_samune.jpg" alt="ブログ記事の画像"></a>
-					  <p class="daimei">杉並区　Gion</p>
+					  <h3>阿佐ヶ谷の秘宝Gionへ行ってみた</h3>
 					  <p>2022/4/16</p>
 					  <img src="images/swan_a.jpg" alt="ブログ記事の画像２">
-					  <p class="daimei">◯◯区　◯◯</p>
-					  <p>2022/◯/◯◯ </p>
-					  <p class="more"><a href="allblog.html">more＞＞</a></p>
+					  <h3>更新予定です。</h3>
+					  <p>2022/◯/◯</p>
+					  <a href="allblog.html"><div class="btn">more</div></a>
 				  </section>
 			  </div>
-			  <div class="tokusyuandranking">
-				  <section class="tokusyu">
+		  
+		  <!--２列目スタート-->
+		  <div class="list list-two">
+			  　　 <!--特集記事スタート-->
+				  <section class="feature">
 					  <h1>特集記事</h1>
 					  <p>１番キュートなパフェ</p>
 					  <img src="images/paferanking_a.png" alt="パフェランキングの画像">
 					  <p>クリームソーダランキング</p>
 					  <img src="images/kuriso_a.png" alt="クリソーランキングの画像">
-					  <p class="more"><a href="tokusyu.html">more＞＞</a></p>
+					  <a href="tokusyu.html"><div class="btn">more</div></a>
 				  </section>
+				   <!--週間ランキングスタート-->
 				  <section class="ranking">
 				    <h1>週間ランキング</h1>
 					  
@@ -132,12 +123,11 @@
 				  </section>
 			  </div>
 		  </div>
-	  </div>
-</div>
-	
+	</div>
+	<a href="#" class="gotop"></a>
 　　<footer>
 	<small>(c)2022 reira-studio.</small>
 　　</footer>
-	
-</body>
+	</div>
+	</body>
 </html>
