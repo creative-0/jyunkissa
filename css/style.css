@@ -681,7 +681,7 @@ html{
 	background-color: #B4B4B4;
 
 }
-#area .btn{
+#area .btn, #east_area .btn, #south_area .btn, #north_area .btn, #west_area .btn{
 	margin-right: 120px;
 	margin-top:10px;
 }
