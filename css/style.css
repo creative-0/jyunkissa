@@ -48,7 +48,7 @@ header{
 	margin-left: 3%;
 	background-image: url("../images/cherry.png");
 	background-position: 80% 0%;
-	background-size: 80px;
+	background-size: 50%;
 	background-repeat: no-repeat;
 }
 @media screen and (max-width:599px){
@@ -534,7 +534,7 @@ html{
 	display:flex;
 }
 
-/*★★ーーーーー都心６区ここから★★ーーー----------------------ー*/
+/*★★ーーーーー都心６区スタート★★ーーー----------------------ー*/
 .area-bar{
 	margin-top:5px;
 }
@@ -627,7 +627,7 @@ html{
 	padding-left: 40px;
 }
 
-/*都心６区の基本設定*/
+/*エリアの区の基本設定*/
 .ku{
 	border: 1px solid;
 	text-align: center;
@@ -665,7 +665,7 @@ html{
 	
 }
 
-/*---------------ボタン始まり-------------------*/
+/*---------------ボタンスタート-------------------*/
 .btn{
 	background-color: #ffffff;
 	color: #000000;
@@ -681,7 +681,7 @@ html{
 	background-color: #B4B4B4;
 
 }
-#area .btn, #east_area .btn, #south_area .btn, #north_area .btn, #west_area .btn{
+#area .btn{
 	margin-right: 120px;
 	margin-top:10px;
 }
@@ -699,6 +699,9 @@ html{
 }
 #west_area .btn:hover{
 	background-color: #B299D9;
+}
+.area .btn{
+	margin-right: 110px;
 }
 /*---------------ボタン終わり-------------------*/
 /*ーーーーーーーーーエリアごとの背景カラーーーーーーーーーー*/
@@ -725,7 +728,7 @@ html{
 		display: none;
 	}
 }
-/*ーーー★★kissaten.html始まり★★ーーー*/
+/*ーーー★★miniblog始まり★★ーーー*/
 
 .leftcontent{
 	width: 60%;
@@ -828,6 +831,9 @@ html{
 }
 
 /*ーーー★★プロフィールページの始まり★★ーーー*/
+#profile .content{
+	background-color:#F5D0DA;
+}
 .profile{
 	height: 500px;
 	width: 100vw;
@@ -835,6 +841,7 @@ html{
 	font-family: source-han-sans-japanese,sans-serif;
 	margin:0 auto;
 }
+
 @media screen and (max-width:599px){
 	.profile{
 		width:100vw;
@@ -843,6 +850,7 @@ html{
 
 .profile h1{
 	font-size: 35px;
+	padding-top:50px;
 	margin-bottom: 0;
 }
 @media screen and (max-width:599px){
@@ -856,7 +864,7 @@ html{
 .profile p{
 	font-size: 16px;
 	text-align: center;
-	line-height: 28px;
+	line-height: 2em;
 }
 
 .profiletext{
@@ -870,7 +878,6 @@ html{
 	margin-top:10px;
 	padding: 0;
 	font-family: source-han-sans-japanese,sans-serif;
-    font-weight: 400;
 }
 @media screen and (max-width:599px){
 	.profiletext p{
@@ -888,10 +895,8 @@ html{
 }
 .sns h1{
 	text-align: center;
-	border: 1px solid;
-	background-color: rgba(21,138,26,0.6);
 	color: aliceblue;
-	margin: 50px 0 100px;
+	margin: 90px 0 40px;
 }
 .sns h2{
 	font-size:40px;
@@ -901,6 +906,7 @@ html{
 .snsmedia{
 	width:30%;
 	border:1px solid;
+	background-color:#fff;
 }
 .snsmedia img{
 	width:100%;
